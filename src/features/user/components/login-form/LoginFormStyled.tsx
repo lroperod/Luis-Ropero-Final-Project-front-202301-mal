@@ -82,10 +82,3 @@ export const LoginStatusFeedBackSuccess = styled.div`
   font-size: 1.5rem;
   margin-top: 3rem;
 `;
-
-export const LoginStatusFeedBackLoading = styled.p`
-  text-align: center;
-  font-size: 1.2rem;
-  margin-top: 3rem;
-  color: #82a7c4;
-`;
