@@ -12,8 +12,7 @@ import {
   WelcomeMessageStyled,
   MessageVaccination,
 } from './LoginFormStyled';
-import { InputFormStyled } from './LoginFormStyled';
-import { LabelFormStyled } from './LoginFormStyled';
+import { InputFormStyled, LabelFormStyled } from './LoginFormStyled';
 
 const LoginForm = () => {
   const dispatch = useAppDispatch();
