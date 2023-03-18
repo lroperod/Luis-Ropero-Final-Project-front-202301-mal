@@ -12,7 +12,7 @@ export const MainContainer = styled.main`
 
 export const ImageLoginStyled = styled.div`
   background-image: url('assets/images-login/login-mobile.webp');
-  height: 600px;
+  height: 500px;
   max-width: 100%;
   background-repeat: no-repeat;
   background-size: cover;

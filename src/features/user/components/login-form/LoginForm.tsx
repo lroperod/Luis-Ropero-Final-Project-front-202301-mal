@@ -1,5 +1,6 @@
 import React from 'react';
 import { useAppDispatch, useAppSelector } from '../../../../app/hooks';
+import Loading from '../../../../shared/components/loading/loading';
 import { getNewUserTokenAsync, selectUser } from '../../user-slice';
 
 import {
@@ -7,7 +8,6 @@ import {
   InfoSignUpStyled,
   LoginFormStyled,
   LoginStatusFeedBackError,
-  LoginStatusFeedBackLoading,
   LoginStatusFeedBackSuccess,
   WelcomeMessageStyled,
   MessageVaccination,
@@ -78,11 +78,7 @@ const LoginForm = () => {
             </p>
           </InfoSignUpStyled>
         </>
-        {status === 'loading' ? (
-          <LoginStatusFeedBackLoading>Loading...</LoginStatusFeedBackLoading>
-        ) : (
-          feedBackUser()
-        )}
+        {status === 'loading' ? <Loading></Loading> : feedBackUser()}
       </LoginFormStyled>
     </>
   );
