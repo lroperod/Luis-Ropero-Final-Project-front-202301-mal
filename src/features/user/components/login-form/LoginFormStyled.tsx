@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 
 export const LoginFormStyled = styled.form`
-  max-width: 100%;
+  width: 100%;
   padding: 2rem;
   color: #333;
   display: flex;
   flex-direction: column;
-  border: 2px solid lightgray;
 
   @media (min-width: 1024px) {
     width: 50%;
+    margin-top: 13rem;
   }
 `;
 
@@ -56,11 +56,36 @@ export const InfoSignUpStyled = styled.div`
   }
 `;
 
-export const WelcomeMessageStyled = styled.p`
+export const WelcomeMessageStyled = styled.div`
   margin: 0.2rem;
   font-size: 25px;
-  p:nth-of-type(2) {
-    color: #2da4ff;
-    font-weight: bold;
-  }
+  text-align: center;
+  white-space: pre-line;
+`;
+export const MessageVaccination = styled.span`
+  display: block;
+  color: #2da4ff;
+  font-weight: bold;
+  text-align: center;
+`;
+
+export const LoginStatusFeedBackError = styled.div`
+  color: red;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 3rem;
+`;
+
+export const LoginStatusFeedBackSuccess = styled.div`
+  color: green;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 3rem;
+`;
+
+export const LoginStatusFeedBackLoading = styled.p`
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 3rem;
+  color: #82a7c4;
 `;
