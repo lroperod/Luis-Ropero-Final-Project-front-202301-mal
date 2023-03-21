@@ -46,6 +46,10 @@ describe('Given a continent card list component', () => {
       continents.forEach(continent => {
         const continentName = screen.getByText(continent.nameContinent);
         expect(continentName).toBeInTheDocument();
+        const imageURL = screen.getByText(continent.imageURL);
+        expect(imageURL).toBeInTheDocument();
+        const alt = screen.getByText(continent.alt);
+        expect(alt).toBeInTheDocument();
       });
     });
   });
