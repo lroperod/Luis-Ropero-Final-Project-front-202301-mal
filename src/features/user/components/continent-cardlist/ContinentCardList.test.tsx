@@ -6,8 +6,8 @@ import { mockedContinents } from '../../../../mocks/data';
 import ContinentCardList from './ContinentCardList';
 
 describe('Given a continent card list component', () => {
-  describe('When the component loads and Api responds with continents', () => {
-    test('Then it should response with a continent list', async () => {
+  describe('When the component loads and Api responds', () => {
+    test('Then it should response with a article', async () => {
       render(
         <Provider store={store}>
           <MemoryRouter>
@@ -18,6 +18,35 @@ describe('Given a continent card list component', () => {
       const continentList = await screen.findByRole('article');
 
       expect(continentList).toBeInTheDocument();
+    });
+  });
+
+  describe('When the component loads and Api respond', () => {
+    test('Then it shoud responde  with a list of continents', () => {
+      const continents = [
+        {
+          nameContinent: 'Asia',
+          imageURL: 'assets/images-home/asia.webp',
+          alt: 'image-asia',
+        },
+        {
+          nameContinent: 'Africa',
+          imageURL: 'assets/images-home/africa.webp',
+          alt: 'image-africa',
+        },
+        {
+          nameContinent: 'America',
+          imageURL: 'assets/images-home/asia.webp',
+          alt: 'image-america',
+        },
+      ];
+
+      render(<ContinentCardList continents={continents} />);
+
+      continents.forEach(continent => {
+        const continentName = screen.getByText(continent.nameContinent);
+        expect(continentName).toBeInTheDocument();
+      });
     });
   });
 });
