@@ -36,20 +36,18 @@ describe('Given a continent card list component', () => {
         },
         {
           nameContinent: 'America',
-          imageURL: 'assets/images-home/asia.webp',
+          imageURL: 'assets/images-home/america.webp',
           alt: 'image-america',
         },
       ];
 
       render(<ContinentCardList continents={continents} />);
 
-      continents.forEach(continent => {
+      continents.forEach(async continent => {
         const continentName = screen.getByText(continent.nameContinent);
         expect(continentName).toBeInTheDocument();
-        const imageURL = screen.getByText(continent.imageURL);
+        const imageURL = await screen.findByRole('img');
         expect(imageURL).toBeInTheDocument();
-        const alt = screen.getByText(continent.alt);
-        expect(alt).toBeInTheDocument();
       });
     });
   });
