@@ -43,19 +43,6 @@ export const ButtonFormStyled = styled.button`
   }
 `;
 
-export const InfoSignUpStyled = styled.div`
-  color: gray;
-  text-align: right;
-  span {
-    color: #2da4ff;
-    padding-left: 0.5rem;
-    :hover {
-      color: orange;
-      cursor: pointer;
-    }
-  }
-`;
-
 export const WelcomeMessageStyled = styled.div`
   margin: 0.2rem;
   font-size: 25px;

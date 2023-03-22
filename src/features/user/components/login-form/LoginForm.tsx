@@ -5,7 +5,6 @@ import { getNewUserTokenAsync, selectUser } from '../../user-slice';
 
 import {
   ButtonFormStyled,
-  InfoSignUpStyled,
   LoginFormStyled,
   LoginStatusFeedBackError,
   LoginStatusFeedBackSuccess,
@@ -74,11 +73,6 @@ const LoginForm = () => {
           <ButtonFormStyled type="submit" disabled={status === 'loading'}>
             LOGIN
           </ButtonFormStyled>
-          <InfoSignUpStyled>
-            <p>
-              Have no account?<span>Sing up</span>
-            </p>
-          </InfoSignUpStyled>
         </>
         {status === 'loading' ? <Loading></Loading> : feedBackUser()}
       </LoginFormStyled>
