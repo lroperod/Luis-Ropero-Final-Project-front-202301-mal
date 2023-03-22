@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const CardContainer = styled.article`
   width: 280px;
-  margin: 10% auto;
+  margin: 1rem auto;
   user-select: none;
   border-radius: 12px;
   border: 1.5px solid #e4e4e4;
@@ -16,7 +16,7 @@ export const TitleContinentStyled = styled.h2`
 
 export const ImageContinentStyled = styled.div`
   width: 100%;
-  height: auto;
+  height: 300px;
   overflow: hidden;
   background-size: cover;
   background-repeat: no-repeat;
