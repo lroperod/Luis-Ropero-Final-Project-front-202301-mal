@@ -1,4 +1,5 @@
 import React from 'react';
+import { Navigate } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../../../app/hooks';
 import Loading from '../../../../shared/components/loading/loading';
 import { getNewUserTokenAsync, selectUser } from '../../user-slice';
@@ -31,6 +32,7 @@ const LoginForm = () => {
         return (
           <LoginStatusFeedBackSuccess>
             {loginMessage}
+            <Navigate to={'/home'} />
           </LoginStatusFeedBackSuccess>
         );
 
