@@ -9,9 +9,10 @@ export const TravelCardContainer = styled.article`
   overflow: hidden;
 `;
 export const TitleTravelStyled = styled.h2`
-  font-family: 'poppins';
+  font-family: 'arial';
   text-align: center;
-  color: grey;
+  color: white;
+  background-color: grey;
 `;
 export const ImageTravelStyled = styled.div`
   width: 100%;
@@ -21,9 +22,33 @@ export const ImageTravelStyled = styled.div`
   background-repeat: no-repeat;
 `;
 export const InfoTravelStyled = styled.div`
-  font-family: 'poppins';
-  color: black;
+  p {
+    padding: 0.5rem;
+  }
+  p > li {
+    text-align: right;
+    padding: 0.5rem;
+  }
+  font-family: 'arial';
+  color: grey;
 `;
+export const NameTravelerStyled = styled.p`
+  font-style: italic;
+  text-align: right;
+`;
+
+export const VaccinesTravelerStyled = styled.p`
+  font-style: italic;
+`;
+
+export const InputDescriptionStyled = styled.span`
+  font-family: 'arial';
+  padding: 0.5rem;
+  color: #2da4ff;
+  font-weight: bold;
+  font-size: 1.1rem;
+`;
+
 export const ButtonTravelStyled = styled.button`
   width: 100%;
   background-color: #2da4ff;

@@ -4,8 +4,11 @@ import {
   ButtonTravelStyled,
   ImageTravelStyled,
   InfoTravelStyled,
+  InputDescriptionStyled,
+  NameTravelerStyled,
   TitleTravelStyled,
   TravelCardContainer,
+  VaccinesTravelerStyled,
 } from './TravelCardStyled';
 
 interface TravelCardProps {
@@ -19,17 +22,17 @@ const TravelCard: FC<TravelCardProps> = ({ travel }) => {
         {<img src={travel.travelImage} alt={travel.continent}></img>}
       </ImageTravelStyled>
       <InfoTravelStyled>
-        <p>{travel.travelCreator}</p>
-        <p>
+        <InputDescriptionStyled>Name:</InputDescriptionStyled>
+        <NameTravelerStyled>{travel.travelCreator}</NameTravelerStyled>
+        <InputDescriptionStyled>Vaccines:</InputDescriptionStyled>
+        <VaccinesTravelerStyled>
           {travel.userAssociatedVaccines.map(travel => (
             <li key={travel.nameVaccines}>{travel.nameVaccines}</li>
           ))}
-        </p>
-        <p>
           {travel.travelAssociatedVaccines.map(travel => (
             <li key={travel.nameVaccines}>{travel.nameVaccines}</li>
           ))}
-        </p>
+        </VaccinesTravelerStyled>
       </InfoTravelStyled>
       <ButtonTravelStyled>Delete</ButtonTravelStyled>
     </TravelCardContainer>
