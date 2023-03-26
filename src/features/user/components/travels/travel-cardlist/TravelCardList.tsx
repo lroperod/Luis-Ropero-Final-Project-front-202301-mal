@@ -1,6 +1,11 @@
 import { FC } from 'react';
+import { Link } from 'react-router-dom';
+import { useAppSelector } from '../../../../../app/hooks';
+import { TravelStatusFeedBackError } from '../../../../../pages/MyTravels/TravelPageStyled';
+import { APIStatus } from '../../../../../shared/models/api-status';
 import { Travel } from '../../../../../shared/models/travel-model';
 import TravelCard from '../travel-card/TravelCard';
+import { selectTravels } from '../travel-slice';
 import { TravelListContainer } from './TravelCardListStyled';
 
 interface TravelCardListProps {
@@ -8,13 +13,32 @@ interface TravelCardListProps {
 }
 
 export const TravelCardList: FC<TravelCardListProps> = ({ travels }) => {
-  return (
-    <TravelListContainer>
-      {travels.map(travels => (
-        <li className="travels-list" key={travels._id}>
-          <TravelCard travel={travels} />
-        </li>
-      ))}
-    </TravelListContainer>
-  );
+  const { status } = useAppSelector(selectTravels);
+
+  switch (status) {
+    case APIStatus.IDLE:
+      return (
+        <TravelListContainer>
+          {travels.map(travel => (
+            <li className="travels-list" key={travel._id}>
+              <TravelCard travel={travel} />
+            </li>
+          ))}
+        </TravelListContainer>
+      );
+    case APIStatus.ERROR:
+      return (
+        <TravelStatusFeedBackError role={'paragraph'}>
+          {' '}
+          There is not travels to show
+        </TravelStatusFeedBackError>
+      );
+    default:
+      return (
+        <>
+          {' '}
+          <Link to={'/home'} />
+        </>
+      );
+  }
 };
