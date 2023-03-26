@@ -1,8 +1,10 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { Provider } from 'react-redux';
+import { MemoryRouter } from 'react-router-dom';
 import { store } from '../../../../app/store';
 import { server } from '../../../../mocks/server';
+import { renderWithProviders } from '../../../../mocks/test-util';
 import LoginForm from './LoginForm';
 
 beforeAll(() => server.listen());
@@ -24,10 +26,10 @@ describe('Given a login form component', () => {
   });
 
   test('When a user tries to login with a valid email and password, then he should receive his access token', async () => {
-    render(
-      <Provider store={store}>
+    renderWithProviders(
+      <MemoryRouter>
         <LoginForm />
-      </Provider>,
+      </MemoryRouter>,
     );
 
     await userEvent.type(
@@ -40,6 +42,7 @@ describe('Given a login form component', () => {
     await waitFor(() => {
       expect(screen.getByText('Successfully logged in!')).toBeInTheDocument();
     });
+    expect(sessionStorage.getItem('accessToken')).toBeDefined();
   });
 
   test('When an user tries to log with incorrect email or password, then it should respond an error', async () => {
