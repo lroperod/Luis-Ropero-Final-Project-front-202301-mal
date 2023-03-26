@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import { Link } from 'react-router-dom';
 import { useAppSelector } from '../../../../../app/hooks';
 
 import { APIStatus } from '../../../../../shared/models/api-status';
