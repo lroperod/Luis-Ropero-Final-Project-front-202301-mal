@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Continent } from '../../../../shared/data/continent';
+import { Continent } from '../../../../../shared/data/continent';
 import ContinentCard from '../continent-card/ContinentCard';
 
 interface ContinentCardListProps {

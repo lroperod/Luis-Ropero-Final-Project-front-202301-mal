@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
-import { Continent } from '../../../../shared/data/continent';
+import { Link } from 'react-router-dom';
+import { Continent } from '../../../../../shared/data/continent';
 import {
   ButtonContinentStyled,
   CardContainer,
@@ -14,7 +15,9 @@ const ContinentCard: FC<Continent> = ({ imageURL, nameContinent, alt }) => {
       <ImageContinentStyled>
         {<img src={imageURL} alt={alt}></img>}
       </ImageContinentStyled>
-      <ButtonContinentStyled>Detail</ButtonContinentStyled>
+      <Link to={'/travel'} style={{ textDecoration: 'none' }}>
+        <ButtonContinentStyled>Book now</ButtonContinentStyled>
+      </Link>
     </CardContainer>
   );
 };
