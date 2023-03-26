@@ -1,19 +1,16 @@
-import { screen, render } from '@testing-library/react';
-import { Provider } from 'react-redux';
+import { screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import { store } from '../../../../../app/store';
 import { mockedContinents } from '../../../../../mocks/data';
+import { renderWithProviders } from '../../../../../mocks/test-util';
 import ContinentCardList from './ContinentCardList';
 
 describe('Given a continent card list component', () => {
   describe('When the component loads and Api responds', () => {
     test('Then it should response with a article', async () => {
-      render(
-        <Provider store={store}>
-          <MemoryRouter>
-            <ContinentCardList continents={[mockedContinents[1]]} />
-          </MemoryRouter>
-        </Provider>,
+      renderWithProviders(
+        <MemoryRouter>
+          <ContinentCardList continents={[mockedContinents[1]]} />
+        </MemoryRouter>,
       );
       const continentList = await screen.findByRole('article');
 
@@ -41,7 +38,11 @@ describe('Given a continent card list component', () => {
         },
       ];
 
-      render(<ContinentCardList continents={continents} />);
+      renderWithProviders(
+        <MemoryRouter>
+          <ContinentCardList continents={continents} />;
+        </MemoryRouter>,
+      );
 
       continents.forEach(async continent => {
         const continentName = screen.getByText(continent.nameContinent);
