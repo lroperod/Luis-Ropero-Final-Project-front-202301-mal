@@ -1,4 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom';
+import CreateFormPage from '../pages/CreateForm/CreateFormPage';
 import { HomePage } from '../pages/Home/HomePage';
 import LoginPage from '../pages/Login/LoginPage';
 import { TravelPage } from '../pages/MyTravels/TravelPage';
@@ -11,11 +12,10 @@ const router = createBrowserRouter([
   {
     path: '/home',
     element: <HomePage />,
-    // children:[
-    // //   {
-    // //     path
-    // //   }
-    // // ]
+  },
+  {
+    path: '/travel-form',
+    element: <CreateFormPage />,
   },
   {
     path: '/travel',
