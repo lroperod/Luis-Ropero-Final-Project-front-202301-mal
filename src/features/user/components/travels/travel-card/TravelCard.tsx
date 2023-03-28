@@ -23,7 +23,7 @@ const TravelCard: FC<TravelCardProps> = ({ travel }) => {
       </ImageTravelStyled>
       <InfoTravelStyled>
         <InputDescriptionStyled>Name:</InputDescriptionStyled>
-        <NameTravelerStyled>{travel.travelCreator}</NameTravelerStyled>
+        <NameTravelerStyled>{travel.userName}</NameTravelerStyled>
         <InputDescriptionStyled>Vaccines:</InputDescriptionStyled>
         <VaccinesTravelerStyled>
           {travel.userAssociatedVaccines.map(travel => (
