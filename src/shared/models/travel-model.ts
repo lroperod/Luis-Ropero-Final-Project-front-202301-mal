@@ -1,7 +1,7 @@
 export interface Travel {
   continent: string;
   travelImage: string;
-  travelCreator: string;
+  userName: string;
   _id: number;
   userAssociatedVaccines: {
     nameVaccines: string;
@@ -12,3 +12,12 @@ export interface Travel {
     stateVaccines: boolean;
   }[];
 }
+
+export type TravelVaccines = {
+  userName: string;
+  continent: string;
+  stayingRuralArea: boolean;
+  chronicRespiratoryDisease: boolean;
+  intentionHaveChildren: boolean;
+  eggOrChickenProteinAllergy: boolean;
+};

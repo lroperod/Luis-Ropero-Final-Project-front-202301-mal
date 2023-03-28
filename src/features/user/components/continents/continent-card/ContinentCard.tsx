@@ -15,7 +15,7 @@ const ContinentCard: FC<Continent> = ({ imageURL, nameContinent, alt }) => {
       <ImageContinentStyled>
         {<img src={imageURL} alt={alt}></img>}
       </ImageContinentStyled>
-      <Link to={'/travel'} style={{ textDecoration: 'none' }}>
+      <Link to={'/travel-form'} style={{ textDecoration: 'none' }}>
         <ButtonContinentStyled>Book now</ButtonContinentStyled>
       </Link>
     </CardContainer>

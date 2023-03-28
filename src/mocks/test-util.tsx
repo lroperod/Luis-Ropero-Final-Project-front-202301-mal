@@ -24,6 +24,7 @@ export const renderWithProviders = (
         travelStatus: 'idle',
         travelMessage: '',
         travels: [],
+        createTravelStatus: 'idle',
       },
     },
     store = setupStore(preloadedState),
