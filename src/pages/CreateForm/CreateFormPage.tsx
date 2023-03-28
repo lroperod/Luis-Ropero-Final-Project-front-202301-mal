@@ -3,14 +3,10 @@ import { Navigate } from 'react-router-dom';
 import { useAppSelector } from '../../app/hooks';
 import TravelForm from '../../features/user/components/travels/travel-form/TravelForm';
 import { selectTravels } from '../../features/user/components/travels/travel-slice';
-import {
-  TravelFormStatusFeedBackError,
-  TravelFormStatusFeedBackSuccess,
-} from './CreateFormPageStyled';
+import { TravelFormStatusFeedBackError } from './CreateFormPageStyled';
 
 export const CreateFormPage = () => {
   const { createTravelStatus } = useAppSelector(selectTravels);
-
   const feedBackUserTravelForm = () => {
     switch (createTravelStatus) {
       case 'error':
@@ -21,12 +17,7 @@ export const CreateFormPage = () => {
         );
 
       case 'success':
-        return (
-          <TravelFormStatusFeedBackSuccess role="paragraph">
-            Your travel has been successfully created.
-            <Navigate to={'/travel'} />
-          </TravelFormStatusFeedBackSuccess>
-        );
+        return <Navigate to={'/travel'} />;
     }
   };
 
