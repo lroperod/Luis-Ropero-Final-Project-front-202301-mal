@@ -126,13 +126,16 @@ export const TravelForm = () => {
           <label htmlFor="no">No</label>
         </div>
       </fieldset>
-      <label htmlFor="travelImage">Upload your trip photo:</label>
+      <label htmlFor="travelImage" data-testid="photo">
+        Upload your trip photo:
+      </label>
       <input
         type="file"
         accept="image/*"
         placeholder="imageURL"
         name="travelUpload"
         id="travelImage"
+        required
       />
       <button type="submit">Create travel</button>
     </TravelFormContainer>
