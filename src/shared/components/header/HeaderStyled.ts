@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const HeaderStyled = styled.header`
-  background: #2da4ff;
+  background: #00599e;
   display: flex;
   justify-content: space-between;
 
