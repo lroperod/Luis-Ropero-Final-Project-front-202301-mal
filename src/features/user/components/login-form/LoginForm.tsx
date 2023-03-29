@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../../../app/hooks';
-import Loading from '../../../../shared/components/loading/loading';
+import Loading from '../../../../shared/components/loading/loading/loading';
 import { getNewUserTokenAsync, selectUser } from '../../user-slice';
 
 import {
