@@ -12,6 +12,7 @@ export const TitleContinentStyled = styled.h2`
   font-family: 'poppins';
   text-align: center;
   color: grey;
+  padding: 0.6rem;
 `;
 
 export const ImageContinentStyled = styled.div`
@@ -31,4 +32,5 @@ export const ButtonContinentStyled = styled.button`
   color: white;
   font-size: 1rem;
   font-weight: bold;
+  padding: 0.8rem;
 `;
