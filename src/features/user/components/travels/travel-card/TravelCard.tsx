@@ -26,12 +26,16 @@ const TravelCard: FC<TravelCardProps> = ({ travel }) => {
         <NameTravelerStyled>{travel.userName}</NameTravelerStyled>
         <InputDescriptionStyled>Vaccines:</InputDescriptionStyled>
         <VaccinesTravelerStyled>
-          {travel.userAssociatedVaccines.map(travel => (
-            <li key={travel.nameVaccines}>{travel.nameVaccines}</li>
-          ))}
-          {travel.travelAssociatedVaccines.map(travel => (
-            <li key={travel.nameVaccines}>{travel.nameVaccines}</li>
-          ))}
+          <ul>
+            {travel.userAssociatedVaccines.map(travel => (
+              <li key={travel.nameVaccines}>{travel.nameVaccines}</li>
+            ))}
+          </ul>
+          <ul>
+            {travel.travelAssociatedVaccines.map(travel => (
+              <li key={travel.nameVaccines}>{travel.nameVaccines}</li>
+            ))}
+          </ul>
         </VaccinesTravelerStyled>
       </InfoTravelStyled>
       <ButtonTravelStyled>Delete</ButtonTravelStyled>
