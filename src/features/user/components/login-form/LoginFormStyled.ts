@@ -33,7 +33,7 @@ export const ButtonFormStyled = styled.button`
   width: 100%;
   border-radius: 20px;
   margin: 1rem auto;
-  background: #2da4ff;
+  background: #00599e;
   color: white;
   padding: 1rem;
   border: 0 solid transparent;
@@ -51,7 +51,7 @@ export const WelcomeMessageStyled = styled.div`
 `;
 export const MessageVaccination = styled.span`
   display: block;
-  color: #2da4ff;
+  color: #00599e;
   font-weight: bold;
   text-align: center;
 `;

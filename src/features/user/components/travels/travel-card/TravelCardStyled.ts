@@ -33,7 +33,7 @@ export const InfoTravelStyled = styled.div`
     padding: 0.5rem;
   }
   font-family: 'arial';
-  color: grey;
+  color: #595959;
   padding: 1rem;
 `;
 export const NameTravelerStyled = styled.p`
@@ -49,14 +49,14 @@ export const VaccinesTravelerStyled = styled.div`
 export const InputDescriptionStyled = styled.span`
   font-family: 'arial';
   padding: 0.5rem;
-  color: #2da4ff;
+  color: #00599e;
   font-weight: bold;
   font-size: 1.1rem;
 `;
 
 export const ButtonTravelStyled = styled.button`
   width: 100%;
-  background-color: #2da4ff;
+  background-color: #00599e;
   border: none;
   box-sizing: border-box;
   min-height: 2rem;

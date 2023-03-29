@@ -84,7 +84,7 @@ export const TravelFormContainer = styled.form`
 
   button[type='submit'] {
     width: 40%;
-    background-color: #2da4ff;
+    background-color: #00599e;
     color: white;
     padding: 10px 20px;
     border: none;

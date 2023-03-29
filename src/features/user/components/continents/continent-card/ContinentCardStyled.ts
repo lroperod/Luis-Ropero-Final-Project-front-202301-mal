@@ -24,7 +24,7 @@ export const ImageContinentStyled = styled.div`
 `;
 export const ButtonContinentStyled = styled.button`
   width: 100%;
-  background-color: #2da4ff;
+  background-color: #00599e;
   border: none;
   box-sizing: border-box;
   min-height: 2rem;
