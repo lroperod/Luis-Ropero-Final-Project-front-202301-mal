@@ -45,6 +45,7 @@ export const TravelFormContainer = styled.form`
     max-width: 280px;
     height: 40px;
   }
+
   select {
     font-family: 'Roboto', Helvetica, Arial, sans-serif;
     padding: 10px;
