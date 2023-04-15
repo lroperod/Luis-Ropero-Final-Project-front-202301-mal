@@ -1,46 +1,65 @@
-# Getting Started with Create React App
+**PRE-TRAVEL VACCINATION**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
+It is a SPA web application that allows the user to consult which vaccines are recommended according to the destination and according to some risk factors or conditions of the traveler.
 
-## Available Scripts
+**LANGUAGES**
 
-In the project directory, you can run:
+- Typescript: https://www.typescriptlang.org/docs/
+- Css: https://developer.mozilla.org/en-US/docs/Web/CSS
+- Html: https://developer.mozilla.org/en-US/docs/Web/HTML
 
-### `npm start`
+**IMPLEMENTATION**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- System architecture:
+  Front-end: SPA architecture
+  Back-end: REST architecture
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Autenticación con JWT
 
-### `npm test`
+**TECHNOLOGIES**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Frontend:
+  REACT: https://react.dev/
+  REDUX: https://redux.js.org/
+  REDUX TOOLKIT: https://redux-toolkit.js.org/
 
-### `npm run build`
+- Backend:
+  NODEJS: https://nodejs.org/es
+  EXPRESS: https://expressjs.com/
+  MONGODB: https://www.mongodb.com/docs/manual/
+  SUPABASE: https://supabase.com/
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Clean Code:
+  HUSKY: https://typicode.github.io/husky/#/
+  ESLINT: https://eslint.org/
+  PRETTIER: https://prettier.io/
+  SONARCLOUD: https://www.sonarsource.com/products/sonarcloud/
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Testing:
+  JEST: https://jestjs.io/
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[Endpoints Pre-Trvel Vaccination](/Pre-Travel%20Vaccination.postman_collection.json)
 
-### `npm run eject`
+**SONAR CLOUD**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=isdi-coders-2023_Luis-Ropero-Final-Project-back-202301-mal&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=isdi-coders-2023_Luis-Ropero-Final-Project-back-202301-mal)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=isdi-coders-2023_Luis-Ropero-Final-Project-back-202301-mal&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=isdi-coders-2023_Luis-Ropero-Final-Project-back-202301-mal)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=isdi-coders-2023_Luis-Ropero-Final-Project-back-202301-mal&metric=coverage)](https://sonarcloud.io/summary/new_code?id=isdi-coders-2023_Luis-Ropero-Final-Project-back-202301-mal)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=isdi-coders-2023_Luis-Ropero-Final-Project-back-202301-mal&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=isdi-coders-2023_Luis-Ropero-Final-Project-back-202301-mal)
 
-## Learn More
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=isdi-coders-2023_Luis-Ropero-Final-Project-back-202301-mal&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=isdi-coders-2023_Luis-Ropero-Final-Project-back-202301-mal)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=isdi-coders-2023_Luis-Ropero-Final-Project-back-202301-mal&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=isdi-coders-2023_Luis-Ropero-Final-Project-back-202301-mal)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=isdi-coders-2023_Luis-Ropero-Final-Project-back-202301-mal&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=isdi-coders-2023_Luis-Ropero-Final-Project-back-202301-mal)
+
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=isdi-coders-2023_Luis-Ropero-Final-Project-back-202301-mal&metric=bugs)](https://sonarcloud.io/summary/new_code?id=isdi-coders-2023_Luis-Ropero-Final-Project-back-202301-mal)
+
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=isdi-coders-2023_Luis-Ropero-Final-Project-back-202301-mal&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=isdi-coders-2023_Luis-Ropero-Final-Project-back-202301-mal)
+
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=isdi-coders-2023_Luis-Ropero-Final-Project-back-202301-mal&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=isdi-coders-2023_Luis-Ropero-Final-Project-back-202301-mal)
+
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=isdi-coders-2023_Luis-Ropero-Final-Project-back-202301-mal&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=isdi-coders-2023_Luis-Ropero-Final-Project-back-202301-mal)
