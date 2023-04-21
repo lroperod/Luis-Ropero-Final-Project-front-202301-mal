@@ -2,7 +2,7 @@ export interface Travel {
   continent: string;
   travelImage: string;
   userName: string;
-  _id: number;
+  _id: string;
   userAssociatedVaccines: {
     nameVaccines: string;
     stateVaccines: boolean;
