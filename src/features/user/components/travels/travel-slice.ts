@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../../../../app/store';
 import { APIStatus } from '../../../../shared/models/api-status';
 import { Travel } from '../../../../shared/models/travel-model';
-import { createNewTravel, getAllTravels } from './travel-api';
+import { createNewTravel, getTravelsByEmailCreator } from './travel-api';
 
 interface TravelStatus {
   status: APIStatus;
@@ -32,10 +32,10 @@ const initialState: TravelStatus = {
   createTravelStatus: 'idle',
 };
 
-export const getAllTravelsAsync = createAsyncThunk(
-  `${STATE_NAME}/getAllTravels`,
-  async () => {
-    const apiResponse = await getAllTravels();
+export const getTravelsByEmailCreatorAsync = createAsyncThunk(
+  `${STATE_NAME}/getByUserIdTravels`,
+  async (userEmail: string) => {
+    const apiResponse = await getTravelsByEmailCreator(userEmail);
     const data: TravelResponse = await apiResponse.json();
     if (!apiResponse.ok) {
       throw new Error(data.msg);
@@ -44,6 +44,7 @@ export const getAllTravelsAsync = createAsyncThunk(
     return data;
   },
 );
+
 export const createNewTravelAsync = createAsyncThunk(
   `${STATE_NAME}/createTravel`,
   async (form: HTMLFormElement) => {
@@ -63,12 +64,13 @@ export const travelSlice = createSlice({
   reducers: {},
   extraReducers: builder => {
     builder
-      .addCase(getAllTravelsAsync.pending, state => {
+
+      .addCase(getTravelsByEmailCreatorAsync.pending, state => {
         state.status = APIStatus.LOADING;
         state.travelStatus = 'loading';
       })
       .addCase(
-        getAllTravelsAsync.fulfilled,
+        getTravelsByEmailCreatorAsync.fulfilled,
         (state, action: PayloadAction<TravelResponse>) => {
           state.status = APIStatus.IDLE;
           state.travelStatus = 'success';
@@ -76,7 +78,7 @@ export const travelSlice = createSlice({
           state.travels = action.payload.travels;
         },
       )
-      .addCase(getAllTravelsAsync.rejected, (state, action) => {
+      .addCase(getTravelsByEmailCreatorAsync.rejected, (state, action) => {
         state.status = APIStatus.ERROR;
         state.travelStatus = 'error';
         state.travelMessage = action.error.message;
