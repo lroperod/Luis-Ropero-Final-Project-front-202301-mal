@@ -18,7 +18,7 @@ describe('Given a continent card list component', () => {
           continent: 'Asia',
           travelImage: 'https://example.com/image1.jpg',
           userName: 'Antonio',
-          _id: 1,
+          _id: '1',
           userAssociatedVaccines: [
             {
               nameVaccines: 'Neumococo',
@@ -40,7 +40,7 @@ describe('Given a continent card list component', () => {
           continent: 'Asia',
           travelImage: 'https://example.com/image2.jpg',
           userName: 'Alex',
-          _id: 2,
+          _id: '2',
           userAssociatedVaccines: [
             {
               nameVaccines: 'Hepatitis A',
