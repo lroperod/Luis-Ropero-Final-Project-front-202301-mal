@@ -7,6 +7,7 @@ export interface User {
 export interface UserToken {
   msg: string;
   accessToken: string;
+  userId: string;
 }
 
 export interface UserStatus {
