@@ -24,6 +24,24 @@ export const renderWithProviders = (
         travelStatus: 'idle',
         travelMessage: '',
         travels: [],
+        travel: {
+          continent: '',
+          travelImage: '',
+          userName: '',
+          _id: '',
+          userAssociatedVaccines: [
+            {
+              nameVaccines: '',
+              stateVaccines: false,
+            },
+          ],
+          travelAssociatedVaccines: [
+            {
+              nameVaccines: '',
+              stateVaccines: false,
+            },
+          ],
+        },
         createTravelStatus: 'idle',
       },
     },
