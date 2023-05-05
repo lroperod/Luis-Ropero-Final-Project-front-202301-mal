@@ -30,7 +30,7 @@ const TravelCardDetail: FC<TravelCardDetailProps> = ({ _id }) => {
 
   const dispatch = useAppDispatch();
   useEffect(() => {
-    dispatch(getTravelByIdAsync(_id as string));
+    dispatch(getTravelByIdAsync(_id));
   }, [dispatch, _id]);
 
   const feedBackUser = () => {
