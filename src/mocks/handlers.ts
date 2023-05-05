@@ -36,7 +36,7 @@ export const errorHandlers = [
     (_req, res, ctx) => {
       return res.once(
         ctx.status(404),
-        ctx.json({ msg: 'There is not travel to show' }),
+        ctx.json({ msg: 'The travel does not exist' }),
       );
     },
   ),
