@@ -1,15 +1,4 @@
 import React, { FC, useEffect } from 'react';
-
-import {
-  ButtonTravelStyled,
-  ImageTravelStyled,
-  InfoTravelStyled,
-  InputDescriptionStyled,
-  NameTravelerStyled,
-  TitleTravelStyled,
-  TravelCardContainer,
-  VaccinesTravelerStyled,
-} from '../travel-card/TravelCardStyled';
 import { useAppDispatch, useAppSelector } from '../../../../../app/hooks';
 import {
   deleteTravelByIdAsync,
@@ -17,8 +6,16 @@ import {
   selectTravels,
 } from '../travel-slice';
 import {
+  ButtonTravelCardDetailStyled,
   DeleteStatusFeedBackError,
   DeleteStatusFeedBackSuccess,
+  ImageTravelCardDetailStyled,
+  InfoTravelCardDetailStyled,
+  InputDescriptionTravelCardDetailStyled,
+  NameTravelerCardDetailStyled,
+  TitleTravelCardDetailStyled,
+  TravelCardDetailContainer,
+  VaccinesTravelerCardDetailStyled,
 } from './TravelCardDetailStyled';
 
 interface TravelCardDetailProps {
@@ -52,16 +49,24 @@ const TravelCardDetail: FC<TravelCardDetailProps> = ({ _id }) => {
     }
   };
   return (
-    <TravelCardContainer>
-      <TitleTravelStyled>{travel.continent}</TitleTravelStyled>
-      <ImageTravelStyled>
+    <TravelCardDetailContainer>
+      <TitleTravelCardDetailStyled>
+        {travel.continent}
+      </TitleTravelCardDetailStyled>
+      <ImageTravelCardDetailStyled>
         {<img src={travel.travelImage} alt={travel.continent}></img>}
-      </ImageTravelStyled>
-      <InfoTravelStyled>
-        <InputDescriptionStyled>Name:</InputDescriptionStyled>
-        <NameTravelerStyled>{travel.userName}</NameTravelerStyled>
-        <InputDescriptionStyled>Vaccines:</InputDescriptionStyled>
-        <VaccinesTravelerStyled>
+      </ImageTravelCardDetailStyled>
+      <InfoTravelCardDetailStyled>
+        <InputDescriptionTravelCardDetailStyled>
+          Name:
+        </InputDescriptionTravelCardDetailStyled>
+        <NameTravelerCardDetailStyled>
+          {travel.userName}
+        </NameTravelerCardDetailStyled>
+        <InputDescriptionTravelCardDetailStyled>
+          Vaccines:
+        </InputDescriptionTravelCardDetailStyled>
+        <VaccinesTravelerCardDetailStyled>
           <ul>
             {travel.userAssociatedVaccines.map(travel => (
               <li key={travel.nameVaccines}>{travel.nameVaccines}</li>
@@ -72,19 +77,19 @@ const TravelCardDetail: FC<TravelCardDetailProps> = ({ _id }) => {
               <li key={travel.nameVaccines}>{travel.nameVaccines}</li>
             ))}
           </ul>
-        </VaccinesTravelerStyled>
+        </VaccinesTravelerCardDetailStyled>
         {feedBackUser()}
-      </InfoTravelStyled>
+      </InfoTravelCardDetailStyled>
 
-      <ButtonTravelStyled
+      <ButtonTravelCardDetailStyled
         onClick={() => {
           dispatch(deleteTravelByIdAsync(_id));
         }}
         data-testid="delete"
       >
         Delete
-      </ButtonTravelStyled>
-    </TravelCardContainer>
+      </ButtonTravelCardDetailStyled>
+    </TravelCardDetailContainer>
   );
 };
 
