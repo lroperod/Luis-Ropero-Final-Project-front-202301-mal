@@ -29,3 +29,24 @@ export const handlers = [
     },
   ),
 ];
+
+export const errorHandlers = [
+  rest.get(
+    `${process.env.REACT_APP_API_URL}/api/v1/travel/644ce57c7d6724afce37ed30`,
+    (_req, res, ctx) => {
+      return res.once(
+        ctx.status(404),
+        ctx.json({ msg: 'There is not travel to show' }),
+      );
+    },
+  ),
+  rest.delete(
+    `${process.env.REACT_APP_API_URL}/api/v1/travel/644ce57c7d6724afce37ed32`,
+    (_req, res, ctx) => {
+      return res.once(
+        ctx.status(404),
+        ctx.json({ msg: 'There is not travel to delete' }),
+      );
+    },
+  ),
+];
