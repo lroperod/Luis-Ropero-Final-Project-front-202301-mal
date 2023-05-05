@@ -10,11 +10,13 @@ import {
   TravelCardContainer,
   VaccinesTravelerStyled,
 } from './TravelCardStyled';
+import { Link } from 'react-router-dom';
 
 interface TravelCardProps {
   travel: Travel;
 }
 const TravelCard: FC<TravelCardProps> = ({ travel }) => {
+  const { _id } = travel;
   return (
     <TravelCardContainer>
       <TitleTravelStyled>{travel.continent}</TitleTravelStyled>
@@ -38,7 +40,9 @@ const TravelCard: FC<TravelCardProps> = ({ travel }) => {
           </ul>
         </VaccinesTravelerStyled>
       </InfoTravelStyled>
-      <ButtonTravelStyled>Delete</ButtonTravelStyled>
+      <Link to={`/travel-detail/${_id}`} style={{ textDecoration: 'none' }}>
+        <ButtonTravelStyled data-testid="detail">Details</ButtonTravelStyled>
+      </Link>
     </TravelCardContainer>
   );
 };
