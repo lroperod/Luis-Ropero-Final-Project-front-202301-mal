@@ -18,14 +18,14 @@ export const handlers = [
       return res(ctx.status(500), ctx.json({ msg: 'Error while logging in' }));
     },
   ),
-];
 
-export const errorHandlers = [
-  rest.get(
-    `${process.env.REACT_APP_API_URL}/api/v1/travel`,
-
+  rest.delete(
+    `${process.env.REACT_APP_API_URL}/api/v1/travel/644ce57c7d6724afce37ed32`,
     (_req, res, ctx) => {
-      return res.once(ctx.status(500), ctx.json(null));
+      return res(
+        ctx.status(200),
+        ctx.json({ msg: 'The travel has been deleted' }),
+      );
     },
   ),
 ];
