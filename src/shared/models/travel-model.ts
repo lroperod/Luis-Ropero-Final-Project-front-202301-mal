@@ -21,3 +21,5 @@ export type TravelVaccines = {
   intentionHaveChildren: boolean;
   eggOrChickenProteinAllergy: boolean;
 };
+
+export type TravelId = Pick<Travel, '_id'>;
