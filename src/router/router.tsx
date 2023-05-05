@@ -4,6 +4,7 @@ import CreateFormPage from '../pages/CreateForm/CreateFormPage';
 import { HomePage } from '../pages/Home/HomePage';
 import LoginPage from '../pages/Login/LoginPage';
 import { TravelPage } from '../pages/MyTravels/TravelPage';
+import TravelDetailPage from '../pages/TravelDetail/TravelDetailPage';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: 'travel',
         element: <TravelPage />,
+      },
+      {
+        path: 'travel-detail/:_id',
+        element: <TravelDetailPage />,
       },
     ],
   },

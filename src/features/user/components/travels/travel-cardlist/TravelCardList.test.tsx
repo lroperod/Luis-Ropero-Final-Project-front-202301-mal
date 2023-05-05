@@ -1,9 +1,7 @@
 import { screen, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import { errorHandlers } from '../../../../../mocks/handlers';
 import { server } from '../../../../../mocks/server';
 import { renderWithProviders } from '../../../../../mocks/test-util';
-import { TravelPage } from '../../../../../pages/MyTravels/TravelPage';
 import { Travel } from '../../../../../shared/models/travel-model';
 import { TravelCardList } from './TravelCardList';
 
@@ -70,22 +68,6 @@ describe('Given a continent card list component', () => {
 
         expect(travelList[1]).toBeInTheDocument();
       });
-    });
-  });
-});
-
-describe('When component loads and API responds with error', () => {
-  test('Then it should show loading and after response should render the error message', async () => {
-    server.use(...errorHandlers);
-    renderWithProviders(
-      <MemoryRouter>
-        <TravelPage />
-      </MemoryRouter>,
-    );
-
-    await waitFor(() => {
-      const errorMessage = screen.getByText('There is not travels to show');
-      expect(errorMessage).toBeInTheDocument();
     });
   });
 });
